@@ -462,3 +462,22 @@ input, textarea {
 	border-bottom: 0px;
 }
 
+.replace {
+	text-align: center;
+	span {
+		background: darken($back-color, 5%);
+		padding: 7px 15px;
+		border: 1px solid darken($back-color, 10%);
+		box-shadow: 0 0 3px rgba($black, .1);
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+span.span-active {
+	background: $main-color;
+	border-color: darken($main-color, 5%);
+	color: $back-color;
+}
+

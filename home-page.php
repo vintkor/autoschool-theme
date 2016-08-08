@@ -56,6 +56,10 @@ Template Name: Главная
 					<? endwhile; endif; wp_reset_query(); ?>
 				</div>
 				<h2>Наши филлиалы</h2>
+				<div class="replace">
+					<span id="a_maps" class="span-active">Карта</span>
+					<span id="a_list">Список</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -175,6 +179,23 @@ function init () {
 </script>
 
 <div id="yamaps"></div>
+<div id="list" style="display: none;">
+	<div class="container">
+		<div class="row">
+			<?php if ( have_posts() ) : query_posts('cat=4'); 
+				  while (have_posts()) : the_post();?>
+			<div class="col-md-12">
+				<ul>
+					<li>
+						<h3><?php the_title(); ?></h3>
+						<address><?php echo get_post_meta($post->ID, 'coordinates', true); ?></address>
+					</li>
+				</ul>
+			</div>
+			<?php endwhile; endif; wp_reset_query(); ?>
+		</div>
+	</div>
+</div>
 
 <!-- _____________________________END Yandex maps_____________________________ -->
 
