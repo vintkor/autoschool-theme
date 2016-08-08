@@ -205,7 +205,7 @@ blockquote {
     color: #838383;
     font-size: 12px; }
   .news .news-wrapper .one-news, .page .news-wrapper .one-news, .page .page-wrapper .one-news, .page .page-wrapper .one-page {
-    padding: 10px;
+    padding: 30px 10px 10px;
     background: white;
     border: 3px solid gainsboro;
     border-radius: 5px; }

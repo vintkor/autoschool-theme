@@ -4,6 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<?php if (have_posts()): while (have_posts()): the_post(); ?>
+					<h1><?php the_title();?></h1>
 					<div class="col-md-12 news-wrapper">
 						<div class="fillial-img"
 												style="background: url(<?php $thumb_id = get_post_thumbnail_id();
@@ -12,7 +13,7 @@
 											?>) center bottom; background-size: cover;">
 						</div>
 						<div class="one-news">
-							<h1><?php the_title();?></h1>
+							
 							<?php the_content(); ?>
 						</div>
 					</div>					
