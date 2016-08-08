@@ -1,0 +1,352 @@
+@charset "UTF-8";
+html, body {
+  background: #eee;
+  height: 100%; }
+
+.wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  .wrapper .content {
+    display: table-row;
+    height: 100%; }
+
+.img-responsive,
+.attachment-post-thumbnail {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
+div, span, p, li {
+  font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6, div, span, p, li {
+  color: #363636; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0; }
+
+h1 {
+  font-size: 41.6px; }
+
+h2 {
+  font-size: 28.8px; }
+
+h3 {
+  font-size: 25.6px;
+  text-align: center; }
+
+h4 {
+  font-size: 22.4px; }
+
+h5 {
+  font-size: 19.2px; }
+
+h6 {
+  font-size: 17.6px; }
+
+.table {
+  display: table;
+  width: 100%;
+  min-height: 80px;
+  position: relative;
+  margin-bottom: 0; }
+
+.table-cell, .phone .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+
+img.alignleft {
+  float: left;
+  margin: 20px;
+  margin-left: 0; }
+
+img.alignright {
+  float: right;
+  margin: 20px;
+  margin-right: 0; }
+
+img.aligncenter {
+  display: block;
+  margin: 20px auto; }
+
+img.alignnone {
+  display: block;
+  margin: 20px; }
+
+blockquote {
+  margin: 20px !important;
+  padding-laft: 20px;
+  background: #eee; }
+  blockquote p {
+    font-style: italic; }
+
+.flex {
+  display: flex;
+  align-items: center; }
+
+/* -------------------HEADER------------------------*/
+.header {
+  padding: 10px 0; }
+
+.logo img {
+  width: auto;
+  height: 80px; }
+
+.name {
+  font-size: 32px; }
+
+.phone .table-cell {
+  text-align: right; }
+
+.phone p {
+  font-size: 20px; }
+  .phone p img {
+    width: 23px;
+    height: auto;
+    border-radius: 5px; }
+
+/* -------------------TOP NAV-----------------------*/
+.nav {
+  background: #2A73C0;
+  border-bottom: 1px solid #215a96;
+  box-shadow: 0 0 3px rgba(54, 54, 54, 0.2); }
+
+.top-menu {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 999; }
+  .top-menu ul {
+    margin-bottom: 0; }
+  .top-menu li.current-menu-parent a {
+    background: #2566ab; }
+  .top-menu li {
+    display: block;
+    float: left;
+    position: relative;
+    border-right: 1px solid #3a85d4;
+    border-left: 1px solid #2461a3; }
+    .top-menu li:hover ul {
+      display: block; }
+      .top-menu li:hover ul li {
+        text-align: left; }
+    .top-menu li:first-child:before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      left: -2px;
+      position: absolute;
+      border-left: 1px solid #3a85d4; }
+    .top-menu li:last-child:before {
+      content: "";
+      width: 1px;
+      height: 100%;
+      right: -2px;
+      position: absolute;
+      border-right: 1px solid #2461a3; }
+    .top-menu li a {
+      color: #eee;
+      display: block;
+      padding: 15px 15px; }
+      .top-menu li a:hover {
+        background: #2566ab; }
+    .top-menu li ul {
+      position: absolute;
+      left: 0px;
+      padding-left: 0;
+      display: none; }
+      .top-menu li ul li {
+        background: #2A73C0;
+        float: none;
+        border-top: 1px solid #3a85d4;
+        border-bottom: 1px solid #2461a3; }
+        .top-menu li ul li a {
+          white-space: nowrap;
+          display: block; }
+        .top-menu li ul li:first-child:before {
+          display: none; }
+        .top-menu li ul li:last-child:before {
+          display: none; }
+  .top-menu .current-menu-item,
+  .top-menu .current-menu-parent {
+    position: relative;
+    background: #2566ab; }
+    .top-menu .current-menu-item:after,
+    .top-menu .current-menu-parent:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      margin-left: -10px;
+      bottom: -20px;
+      border: 10px solid transparent;
+      border-top: 10px solid #2566ab; }
+
+/* -------------------Similar to NEWS---------------*/
+.news h1, .page h1 {
+  text-align: center; }
+
+.news h2, .page h2 {
+  font-size: 22.4px; }
+
+.news .news-wrapper, .page .news-wrapper, .page .page-wrapper {
+  padding: 10px; }
+  .news .news-wrapper:nth-child(2n+1), .page .news-wrapper:nth-child(2n+1), .page .page-wrapper:nth-child(2n+1) {
+    clear: both; }
+  .news .news-wrapper .date-news, .page .news-wrapper .date-news, .page .page-wrapper .date-news {
+    position: absolute;
+    right: 13px;
+    background: gainsboro;
+    padding: 5px;
+    border-radius: 0 0 0 5px;
+    color: #838383;
+    font-size: 12px; }
+  .news .news-wrapper .one-news, .page .news-wrapper .one-news, .page .page-wrapper .one-news, .page .page-wrapper .one-page {
+    padding: 10px;
+    background: white;
+    border: 3px solid gainsboro;
+    border-radius: 5px; }
+
+/* -------------------PAGE---------------*/
+.page .page-wrapper .one-page {
+  padding: 20px; }
+
+/* -------------------CONTACT-PAGE------------------------*/
+input, textarea {
+  padding: 5px 20px;
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%; }
+
+/* -------------------Отзывы------------------------*/
+#gwolle_gb .admin-entry {
+  background-color: white !important;
+  background-image: none !important;
+  padding: 20px !important; }
+
+/* -------------------PRE FOOTER------------------------*/
+.pre-footer {
+  background: #d5d5d5; }
+  .pre-footer ul {
+    padding-left: 0; }
+    .pre-footer ul li {
+      list-style: none; }
+      .pre-footer ul li a {
+        color: #363636;
+        transition: .2s; }
+        .pre-footer ul li a:hover {
+          color: #2A73C0; }
+
+/* -------------------FOOTER------------------------*/
+.footer {
+  background: #235f9f;
+  width: 100%;
+  height: auto;
+  padding: 10px 0 6px; }
+  .footer p, .footer a {
+    color: #eee;
+    margin-bottom: 0; }
+  .footer .create {
+    text-align: right;
+    color: #eee; }
+  .footer img {
+    width: 20px;
+    height: auto;
+    margin-bottom: 5px;
+    transition: .2s; }
+    .footer img:hover {
+      transform: scale(1.4); }
+
+/* -------------------HOME PAGE------------------------*/
+.section1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url(../img/shadow.png);
+  background-size: cover;
+  background-position: center; }
+
+.section2 {
+  background: #e6e6e6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center; }
+  .section2 a {
+    font-size: 19.2px;
+    font-weight: 300;
+    color: #363636;
+    margin-bottom: 30px; }
+  .section2 .why {
+    box-sizing: border-box;
+    padding: 3px;
+    width: 200px;
+    height: 200px;
+    background: #9ac0e9;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    border: 3px solid white;
+    transition: all ease-in .2s; }
+    .section2 .why:hover {
+      background: white;
+      border: 3px solid #2A73C0;
+      transition: all ease-in .2s; }
+      .section2 .why:hover img {
+        border: 3px solid #2A73C0;
+        transition: all ease-in .2s; }
+    .section2 .why img {
+      width: 100%;
+      height: auto;
+      background: #eee;
+      padding: 3px;
+      border: 3px solid white;
+      border-radius: 50%;
+      transition: all ease-in .2s; }
+
+/* -------------------PAGINATION------------------------*/
+.navi {
+  text-align: center; }
+
+.wp-pagenavi {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+  .wp-pagenavi .current {
+    background: #2A73C0;
+    color: #eee;
+    border: 0;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 1px solid #d5d5d5 !important;
+    border-radius: 3px; }
+  .wp-pagenavi .pages {
+    border: 0 !important;
+    font-size: 16px;
+    padding: 5px; }
+  .wp-pagenavi a {
+    color: #2A73C0;
+    background: white;
+    padding: 5px 10px !important;
+    border: 1px solid #d5d5d5 !important;
+    font-size: 18px; }
+    .wp-pagenavi a:hover {
+      text-decoration: none;
+      border: 1px solid #2A73C0 !important; }
+
+/* -------------------yandex maps------------------------*/
+#yamaps {
+  width: 100%;
+  height: 400px;
+  position: relative; }
+  #yamaps .maps_img img {
+    width: 200px;
+    height: auto; }
+
+.fillial-img {
+  position: relative;
+  height: 400px;
+  margin-bottom: -4px;
+  border-radius: 3px;
+  border: 3px solid gainsboro;
+  border-bottom: 0px; }
