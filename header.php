@@ -1,3 +1,13 @@
+ <!-- 
+  __  __            _  _          ____                   _                        
+ |  \/  |          | |(_)        / __ \                 (_)                       
+ | \  / |  ___   __| | _   __ _ | |  | | _ __    ___     _  _ __     _   _   __ _ 
+ | |\/| | / _ \ / _` || | / _` || |  | || '_ \  / _ \   | || '_ \   | | | | / _` |
+ | |  | ||  __/| (_| || || (_| || |__| || | | ||  __/ _ | || | | | _| |_| || (_| |
+ |_|  |_| \___| \__,_||_| \__,_| \____/ |_| |_| \___|(_)|_||_| |_|(_)\__,_| \__,_|
+
+-->
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,7 +19,6 @@
 	<?php wp_head(); ?>
 	<script src="//api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/app/bower_components/jquery/dist/jquery.min.js"></script>
-	<!-- <script src="<?php echo get_template_directory_uri(); ?>/object_manager.js" type="text/javascript"></script> -->
 </head>
 <body>
 <div class="wrapper">

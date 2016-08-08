@@ -88,12 +88,29 @@ Template Name: Главная
 
 	while (have_posts()) : the_post();
 
+		$coordinates = get_post_meta($post->ID, 'coordinates', true);
+
+		$params = array(
+			'geocode' => $coordinates,
+			'format'  => 'json',
+			'results' => 1,
+			'key'     => 'AFSAqFcBAAAAdOHrSgQAlpg1P3Z8X0Lcl1xEerZ0NqkQShsAAAAAAAAAAAByyA86vNGafPUkAuPaJo5eG8BmLQ=='
+		);
+		$response = json_decode(file_get_contents('http://geocode-maps.yandex.ru/1.x/?' . http_build_query($params, '', '&')));
+		if ($response->response->GeoObjectCollection->metaDataProperty->GeocoderResponseMetaData->found > 0)
+			{
+			$data = $response->response->GeoObjectCollection->featureMember[0]->GeoObject->Point->pos;
+			$replace = explode(' ', $data);
+			$coordinates = $replace[1] . ', ' . $replace[0];
+
+		}
+
 		$link = get_the_permalink();
 		$title = get_the_title();
 		$thumb_id = get_post_thumbnail_id();
 		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 		$img = $thumb_url[0];
-		$coordinates = get_post_meta($post->ID, 'coordinates', true);
+		
 		$json = '{"type": "Feature", "id": '
 				. $id
 				. ',  "geometry": {"type": "Point", "coordinates": ['
