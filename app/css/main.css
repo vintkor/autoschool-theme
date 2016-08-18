@@ -175,6 +175,9 @@ blockquote {
   .top-menu .current-menu-parent {
     position: relative;
     background: #2566ab; }
+    .top-menu .current-menu-item > ul li,
+    .top-menu .current-menu-parent > ul li {
+      background: #2A73C0 !important; }
     .top-menu .current-menu-item:after,
     .top-menu .current-menu-parent:after {
       content: '';
@@ -186,29 +189,29 @@ blockquote {
       border-top: 10px solid #2566ab; }
 
 /* -------------------Similar to NEWS---------------*/
-.news h1, .page h1 {
-  text-align: center; }
-
-.news h2, .page h2 {
-  font-size: 22.4px; }
-
-.news .news-wrapper, .page .news-wrapper, .page .page-wrapper {
-  padding: 10px; }
-  .news .news-wrapper:nth-child(2n+1), .page .news-wrapper:nth-child(2n+1), .page .page-wrapper:nth-child(2n+1) {
-    clear: both; }
-  .news .news-wrapper .date-news, .page .news-wrapper .date-news, .page .page-wrapper .date-news {
-    position: absolute;
-    right: 13px;
-    background: gainsboro;
-    padding: 5px;
-    border-radius: 0 0 0 5px;
-    color: #838383;
-    font-size: 12px; }
-  .news .news-wrapper .one-news, .page .news-wrapper .one-news, .page .page-wrapper .one-news, .page .page-wrapper .one-page {
-    padding: 30px 10px 10px;
-    background: white;
-    border: 3px solid gainsboro;
-    border-radius: 5px; }
+.news, .page {
+  padding-bottom: 30px; }
+  .news h1, .page h1 {
+    text-align: center; }
+  .news h2, .page h2 {
+    font-size: 22.4px; }
+  .news .news-wrapper, .page .news-wrapper, .page .page-wrapper {
+    padding: 10px; }
+    .news .news-wrapper:nth-child(2n+1), .page .news-wrapper:nth-child(2n+1), .page .page-wrapper:nth-child(2n+1) {
+      clear: both; }
+    .news .news-wrapper .date-news, .page .news-wrapper .date-news, .page .page-wrapper .date-news {
+      position: absolute;
+      right: 13px;
+      background: gainsboro;
+      padding: 5px;
+      border-radius: 0 0 0 5px;
+      color: #838383;
+      font-size: 12px; }
+    .news .news-wrapper .one-news, .page .news-wrapper .one-news, .page .page-wrapper .one-news, .page .page-wrapper .one-page {
+      padding: 30px 10px 10px;
+      background: white;
+      border: 3px solid gainsboro;
+      border-radius: 5px; }
 
 /* -------------------PAGE---------------*/
 .page .page-wrapper .one-page {
@@ -365,3 +368,8 @@ span.span-active {
   background: #2A73C0;
   border-color: #2566ab;
   color: #eee; }
+
+.our-filials {
+  padding: 20px 0; }
+  .our-filials li {
+    line-height: 30px; }

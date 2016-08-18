@@ -64,12 +64,12 @@ img.alignright {
 	margin-right: 0;
 }
 
-img.aligncenter { 
+img.aligncenter {
     display: block;
     margin: 20px auto;
 }
 
-img.alignnone { 
+img.alignnone {
     display: block;
     margin: 20px;
 }
@@ -129,7 +129,7 @@ blockquote {
 }
 
 .top-menu {
-	text-align: center;	
+	text-align: center;
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
@@ -181,8 +181,8 @@ blockquote {
 			padding: 15px 15px;
 			&:hover {
 				background: darken($main-color, 5%);
-			}		
-		}	
+			}
+		}
 		ul {
 			position: absolute;
 			left: 0px;
@@ -195,7 +195,7 @@ blockquote {
 				border-bottom: 1px solid darken($main-color, 7%);
 				a {
 					white-space: nowrap;
-    				display: block;
+    			display: block;
 				}
 				&:first-child:before {
 					display: none;
@@ -204,15 +204,20 @@ blockquote {
 					display: none;
 				}
 			}
-		}	
+		}
 	}
 	.current-menu-item,
 	.current-menu-parent {
 			position: relative;
 			background: darken($main-color, 5%);
-		
+			> ul {
+				li {
+					background: $main-color !important;
+				}
+			}
+
 			&:after {
-				content: ''; 
+				content: '';
 				position: absolute;
 				left: 50%;
 				margin-left: -10px;
@@ -226,6 +231,7 @@ blockquote {
 /* -------------------Similar to NEWS---------------*/
 
 .news {
+	padding-bottom: 30px;
 
 	h1 {
 		text-align: center;
@@ -273,7 +279,7 @@ blockquote {
 		.one-page {
 			@extend .one-news;
 			padding: 20px;
-		}	
+		}
 	}
 }
 
@@ -365,10 +371,10 @@ input, textarea {
 	}
 
 	.why {
-		box-sizing: border-box;		
+		box-sizing: border-box;
 		padding: 3px;
 		width: 200px;
-		height: 200px;		
+		height: 200px;
 		background: lighten($main-color, 30%);
 		border-radius: 50%;
 		position: relative;
@@ -431,7 +437,7 @@ input, textarea {
 		border: 1px solid darken($back-color, 10%) !important;
 		font-size: $font-size + 2px;
 
-		&:hover {		
+		&:hover {
 			text-decoration: none;
 			border: 1px solid $main-color !important;
 		}
@@ -481,3 +487,9 @@ span.span-active {
 	color: $back-color;
 }
 
+.our-filials {
+	padding: 20px 0;
+	li {
+		line-height: 30px;
+	}
+}

@@ -34,7 +34,7 @@ Template Name: Главная
 				<div class="col-md-3">
 					<div class="why">
 					<?php if ( have_posts() ) : query_posts('page_id=25'); while (have_posts()) : the_post(); ?>
-						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>						
+						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 					</div>
 					<h4><?php the_title();?></h4>
 					<? endwhile; endif; wp_reset_query(); ?>
@@ -42,7 +42,7 @@ Template Name: Главная
 				<div class="col-md-3">
 					<div class="why">
 					<?php if ( have_posts() ) : query_posts('p=98'); while (have_posts()) : the_post(); ?>
-						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>						
+						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 					</div>
 					<h4><?php the_title();?></h4>
 					<? endwhile; endif; wp_reset_query(); ?>
@@ -50,7 +50,7 @@ Template Name: Главная
 				<div class="col-md-3">
 					<div class="why">
 					<?php if ( have_posts() ) : query_posts('page_id=55'); while (have_posts()) : the_post(); ?>
-						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>						
+						<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 					</div>
 					<h4><?php the_title();?></h4>
 					<? endwhile; endif; wp_reset_query(); ?>
@@ -114,7 +114,7 @@ Template Name: Главная
 		$thumb_id = get_post_thumbnail_id();
 		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 		$img = $thumb_url[0];
-		
+
 		$json = '{"type": "Feature", "id": '
 				. $id
 				. ',  "geometry": {"type": "Point", "coordinates": ['
@@ -131,9 +131,9 @@ Template Name: Главная
 		$while_step++;
 
 		if ($while_step < $count) {
-			$center[] = $json . ',';	
+			$center[] = $json . ',';
 		} else {
-			$center[] = $json;	
+			$center[] = $json;
 		}
 
 	endwhile; endif; wp_reset_query();
@@ -152,7 +152,7 @@ Template Name: Главная
 ?>
 
 <script>
-	
+
 ymaps.ready(init);
 
 function init () {
@@ -182,17 +182,16 @@ function init () {
 <div id="list" style="display: none;">
 	<div class="container">
 		<div class="row">
-			<?php if ( have_posts() ) : query_posts('cat=4'); 
-				  while (have_posts()) : the_post();?>
-			<div class="col-md-12">
-				<ul>
+			<div class="col-md-12 our-filials">
+				<ol>
+					<?php if ( have_posts() ) : query_posts('cat=4');
+						  while (have_posts()) : the_post();?>
 					<li>
-						<h3><?php the_title(); ?></h3>
-						<address><?php echo get_post_meta($post->ID, 'coordinates', true); ?></address>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php echo get_post_meta($post->ID, 'coordinates', true); ?>
 					</li>
-				</ul>
+					<?php endwhile; endif; wp_reset_query(); ?>
+				</ol>
 			</div>
-			<?php endwhile; endif; wp_reset_query(); ?>
 		</div>
 	</div>
 </div>
